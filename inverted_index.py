@@ -17,6 +17,8 @@ client = MongoClient("mongodb://localhost:27017/")
 db = client["assignment3"]
 documents = db["documents"]
 inverted_index = db["inverted_index"]
+
+# reset database to avoid errors when rerunning the code 
 documents.delete_many({})
 inverted_index.delete_many({})
 
